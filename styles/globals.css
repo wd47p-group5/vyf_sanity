@@ -1,3 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
 html,
 body, * {
   padding: 0;
@@ -84,6 +102,7 @@ width: 100%;
 .cart-item-qty{
   position: absolute;
   right: -8px;
+  top: 25px;
   font-size: 12px;
   color: #eee;
   background-color: #f02d34;
@@ -380,8 +399,6 @@ padding: 20px 10px;
   color: #f02d34;
   cursor: pointer;
   background: transparent;
-  float: right;
-  
   border: none;
 }
 .cart-bottom{
@@ -492,7 +509,9 @@ padding: 30px 65px;
   display: flex;
   gap: 30px;
 }
-.buttons .add-to-cart{
+.add-to-cart{
+  /* @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
+  @apply mt-[40px]; */
   padding: 10px 20px;
   border: 1px solid #f02d34 ;
   margin-top: 40px;
@@ -529,7 +548,7 @@ padding: 30px 65px;
   border: 1px solid gray;
 padding: 6px;
 }
-.quantity-desc span{
+.quantity-desc .span{
   font-size: 16px;
   padding: 6px 12px;
   cursor: pointer;

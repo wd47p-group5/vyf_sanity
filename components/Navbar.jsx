@@ -3,21 +3,21 @@ import Link from 'next/link';
 import {AiOutlineShopping} from 'react-icons/ai'
 import Cart from './Cart';
 import { useStateContext } from '../context/StateContext';
+import Image from 'next/image';
+import vyfLogo from '../public/vyf-logo.webp'
 
 const Navbar = () => {
   const {showCart, setShowCart, totalQuantities} = useStateContext();
   return (
-    <div className='navbar-container'>
-      <p className='logo'>
-        <Link href='/'>Phone Store</Link>
-      </p>
-      <button type='button' 
-      className='cart-icon'
-      onClick={()=>
-        setShowCart(true)
-      }
-      >
-        <AiOutlineShopping/>
+    <div className='flex justify-between'>
+      <div className='logo'>
+        <Link className='flex items-center p-5 gap-1 font-bold text-2xl text-[#292F36]' href="">
+          <div className='flex items-center text-2xl font-bold gap-1 p-3'><Image src={vyfLogo} width="60" height="52" className=''/> VYF Store</div></Link>
+      </div>
+
+      <button type="button" className='cart-icon mr-10' 
+      onClick={() => setShowCart(true)}>
+        <AiOutlineShopping />
         <span className='cart-item-qty'>{totalQuantities}</span>
       </button>
       {showCart && 

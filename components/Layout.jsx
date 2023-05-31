@@ -1,13 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import React from 'react'
+import Head from 'next/head'
+import { Footer, Navbar } from '.'
 
 const Layout = ({children}) => {
   return (
     <div className='layout'>
       <Head>
-        <title>Phone Store</title>
+        <title>VYF Store</title>
       </Head>
       <header>
         <Navbar />
