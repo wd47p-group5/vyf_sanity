@@ -14,12 +14,12 @@ const ProductDetails = ({productData, products}) => {
     }
     return (
         <>
-        <main className="my-8 text-[#292F36]">
+        <main className="my-8 text-[#292F36] dark:text-white">
             <div className="container mx-auto px-6">
                 <div className="md:flex md:items-center">
                     <div className="w-full h-64 md:w-1/2 lg:h-96 ">
                         <img className="bg-black h-full w-full rounded-md object-cover max-w-lg mx-auto" src={urlFor(image && image[index])} alt="Photo of Girl Shorts" />
-                        <div className='flex gap-5 mt-5 ml-12'>
+                        {/* <div className='hidden md:flex gap-5 mt-5 lg:ml-12'>
                             {image?.map((item,i)=> (
                                 <img src={urlFor(item) }
                                 key={i}
@@ -27,15 +27,15 @@ const ProductDetails = ({productData, products}) => {
                                 onMouseEnter={() => setIndex(i)}
                                 />
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                     
                     
                     <div className="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2 lg:py-12">
-                        <h3 className="text-3xl leading-7 mt-2 mb-2 font-bold uppercase lg:text-5xl">{name}</h3>
+                        <h3 className="text-3xl leading-7 mt-2 mb-2 font-bold lg:text-5xl">{name}</h3>
                         <span className="text-2xl leading-7 text-[#3a95d2] font-bold mt-3">&#8369;{price}</span><br/>
                         <span className="text-1xl leading-2 mt-5">{details}</span>
-                            <div className="mt-8">
+                            <div className="flex justify-center md:justify-normal items-center mt-8">
                                 
                                 <div className="flex items-center text-center mt-4 rounded-md">
                                     <div className='flex items-center gap-4 rounded-md quantity-desc'>
@@ -47,7 +47,7 @@ const ProductDetails = ({productData, products}) => {
                                 </div>
                             </div>
                         <div className="mt-5 flex flex-col justify-between ">
-                            <div className='flex'>
+                            <div className='flex justify-center md:justify-normal'>
                                 <button type='button' className='btn-darkmode' onClick={() => {
                                     onAdd(productData,qty)}}>Add to Cart</button>
                                 <button type='button' className='btn-alt' onClick={handleBuyNow}>Go to checkout</button>
@@ -57,8 +57,18 @@ const ProductDetails = ({productData, products}) => {
                 </div>
             </div>
         </main>
-
-    <div>
+        
+        <div className='maylike-products-wrapper'>
+                <h2>You may also like</h2>
+                <div className='marquee'>
+                    <div className='maylike-products-container track'>
+                        {products.map((item)=>(
+                            <Product key={item._id} product={item}/>
+                        ))}
+                    </div>
+                </div>
+        </div>
+    {/* <div>
         <div className='product-detail-container'>
             <div>
                 <div className='image-container'>
@@ -116,7 +126,7 @@ const ProductDetails = ({productData, products}) => {
                     </div>
                 </div>
         </div>
-    </div>
+    </div> */}
 
     </>
   )

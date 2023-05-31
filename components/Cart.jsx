@@ -31,7 +31,7 @@ const Cart = () => {
   }
 
   return (
-    <div className='flex items-center justify-end cart-wrapper text-[#292F36] dark:text-white' ref={cartRef}>
+    <div className='cart-wrapper' ref={cartRef}>
       <div className='cart-container'>
         <div className='ml-5 flex flex-row items-center gap-2 text-lg'>
           &gt;
@@ -40,14 +40,14 @@ const Cart = () => {
               <AiOutlineShopping className='text-[2rem] text-[#292F36]' /> <span className='cart-item-qty flex items-center text-center mt-[-1.625rem]'>{totalQuantities}</span>
             </div>
           </button>
-          </div>
+        </div>
         {cartItems.length < 1 && (
           <div className='empty-cart'>
             
             <AiOutlineShopping size={150}/>
             <h3>Your shopping bag is empty.</h3>
             <Link href='/'>
-              <button type='button' onClick={()=>setShowCart(false)} className='btn-darkmode'>
+              <button type='button' onClick={()=>setShowCart(false)} className='btn-alt'>
                 Continue Shopping
               </button>
             </Link>
@@ -57,38 +57,33 @@ const Cart = () => {
           {cartItems.length >= 1 && cartItems.sort((a,b) => a.orderValue > b.orderValue ? 1 : -1).map((item)=>(
             <div className='product' key={item._id}>
               <img src={urlFor(item?.image[0])} className='cart-product-image'/>
-              <div className='item-desc'>
-                  <button type='button'
-                  className='remove-item'
-                  onClick={()=> onRemove(item)}
-                  >
-                    <TiDeleteOutline/>
-                  </button>
-                <div className='flex'>
-                  <h5>{item.name}</h5>
-                  <h4>&#8369;{item.price}</h4>
-                </div>
-                
-                    <div className='flex flex-row justify-start w-10 items-center text-center rounded-md quantity-desc'>
-                      <span className='cursor-pointer font-medium' onClick={()=>toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus/></span>
-                      <span className='cursor-default'>{item.quantity}</span>
-                      <span className='cursor-pointer font-medium' onClick={()=>toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus/></span>
-                    </div>
-                
+                <div className='flex items-start flex-col'>
+                    <button type='button' className='remove-item' onClick={()=> onRemove(item)}>
+                      <TiDeleteOutline/>
+                    </button>
+                  <div className='py-2 text-[#292F36]'>
+                    <h5 className='text-xl font-semibold'>{item.name}</h5>
+                    <h4 className='text-[#3a95d2]'>&#8369;{item.price}</h4>
+                  </div>
                   
-                
-              </div>
+                      <div className='flex flex-row justify-start items-center text-[#292F36] text-center rounded-md quantity-desc gap-5'>
+                        <span className='minus' onClick={()=>toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus/></span>
+                        <span className='quantity-count cursor-default '>{item.quantity}</span>
+                        <span className='cursor-pointer font-medium' onClick={()=>toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus/></span>
+                      </div>
+                          
+                </div>
             </div>
           ))
           } 
         </div>
         {cartItems.length >= 1 && (
           <div className='cart-bottom'>
-            <div className='total'>
-              <h3>Subtotal:</h3>
-              <h3>&#8369;{totalPrice.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}</h3>
+            <div className='text-center text-2xl'>
+              <h3>Your bag total is:</h3>
+              <h3 className='text-3xl font-semibold'>&#8369;{totalPrice.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}</h3>
             </div>
-            <div className='btn-container'>
+            <div className='items-center'>
               <button type='button' className='btn-alt' onClick={handleCheckout}>
                 Pay with Stripe
               </button>

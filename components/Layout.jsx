@@ -4,14 +4,17 @@ import { Footer, Navbar } from '.'
 
 const Layout = ({children}) => {
   return (
-    <div className='layout dark:bg-white bg-[#292F36] dark:text-[#292F36] text-white'>
+    <div className='dark:bg-white bg-[#292F36] dark:text-[#292F36] text-white'>
       <Head>
         <title>VYF Store</title>
+        <meta name="author" content="VYF Networks, Inc." />
+        <meta name="description" content="Official Website of VYF Networks, Inc." />
+        <meta name="keywords" content="VYF Networks, Inc., E-commerce, Website" />
       </Head>
       <header>
         <Navbar />
       </header>
-      <main className='main-container'>
+      <main className=''>
         {children}      
       </main>
       <footer>
