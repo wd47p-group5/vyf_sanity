@@ -13,6 +13,51 @@ const ProductDetails = ({productData, products}) => {
         setShowCart(true)
     }
     return (
+        <>
+        <main className="my-8 text-[#292F36]">
+            <div className="container mx-auto px-6">
+                <div className="md:flex md:items-center">
+                    <div className="w-full h-64 md:w-1/2 lg:h-96 ">
+                        <img className="bg-black h-full w-full rounded-md object-cover max-w-lg mx-auto" src={urlFor(image && image[index])} alt="Photo of Girl Shorts" />
+                        <div className='flex gap-5 mt-5 ml-12'>
+                            {image?.map((item,i)=> (
+                                <img src={urlFor(item) }
+                                key={i}
+                                className={i == index ? 'cursor-pointer flex flex-row w-[100px] h-[100px] rounded-md border-[#f5f5f7] border-2 hover:border-black hover:border-2': 'border-[#f5f5f7] border-2 hover:border-black hover:border-2 flex flex-row w-[100px] h-[100px]'}
+                                onMouseEnter={() => setIndex(i)}
+                                />
+                            ))}
+                        </div>
+                    </div>
+                    
+                    
+                    <div className="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2 lg:py-12">
+                        <h3 className="text-3xl leading-7 mt-2 mb-2 font-bold uppercase lg:text-5xl">{name}</h3>
+                        <span className="text-2xl leading-7 text-[#3a95d2] font-bold mt-3">&#8369;{price}</span><br/>
+                        <span className="text-1xl leading-2 mt-5">{details}</span>
+                            <div className="mt-8">
+                                
+                                <div className="flex items-center text-center mt-4 rounded-md">
+                                    <div className='flex items-center gap-4 rounded-md quantity-desc'>
+                                        <span className='cursor-pointer font-medium' onClick={decQty}><AiOutlineMinus/></span>
+                                        <span className='cursor-default quantity-count'>{qty}</span>
+
+                                        <span className='cursor-pointer font-medium' onClick={incQty}><AiOutlinePlus/></span>
+                                    </div>
+                                </div>
+                            </div>
+                        <div className="mt-5 flex flex-col justify-between ">
+                            <div className='flex'>
+                                <button type='button' className='btn-darkmode' onClick={() => {
+                                    onAdd(productData,qty)}}>Add to Cart</button>
+                                <button type='button' className='btn-alt' onClick={handleBuyNow}>Go to checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
     <div>
         <div className='product-detail-container'>
             <div>
@@ -72,6 +117,8 @@ const ProductDetails = ({productData, products}) => {
                 </div>
         </div>
     </div>
+
+    </>
   )
 }
 

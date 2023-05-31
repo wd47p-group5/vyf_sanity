@@ -4,7 +4,7 @@ import { Footer, Navbar } from '.'
 
 const Layout = ({children}) => {
   return (
-    <div className='layout'>
+    <div className='layout dark:bg-white bg-[#292F36] dark:text-[#292F36] text-white'>
       <Head>
         <title>VYF Store</title>
       </Head>

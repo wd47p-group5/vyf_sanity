@@ -20,7 +20,7 @@ html,
 body, * {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
 
@@ -30,8 +30,23 @@ body, * {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  @apply inline-flex text-center items-center justify-center px-8 py-3 text-base font-medium text-white border bg-[#292F36] border-gray-300 rounded-md hover:bg-gray-900 focus:ring-4 focus:ring-gray-100 dark:text-[#292F36] dark:bg-[#fff] dark:border-gray-700 dark:hover:bg-gray-200 dark:focus:ring-gray-800;
+}
+
+.btn-darkmode {
+  @apply inline-flex text-center items-center justify-center px-5 py-2.5 mr-2 mb-2 text-base font-medium text-white border bg-[#292F36] border-gray-300 rounded-md hover:bg-gray-900 focus:ring-4 focus:ring-gray-100 dark:text-[#292F36] dark:bg-[#fff] dark:border-gray-700 dark:hover:bg-gray-200 dark:focus:ring-gray-800;
+}
+.btn-default {
+  @apply flex gap-2 items-center text-white focus:ring-2 font-normal rounded-md text-base px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-blue-400;
+}
+.btn-safe {
+  @apply flex gap-2 items-center focus:outline-none text-white font-medium rounded-md text-base px-5 py-2.5 mr-2 mb-2 bg-green-600 hover:bg-green-700 focus:ring-green-400;
+}
+.btn-danger {
+  @apply flex gap-2 items-center focus:outline-none text-white focus:ring-2 font-medium rounded-md text-base px-5 py-2.5 mr-2 mb-2 bg-red-600 hover:bg-red-700 focus:ring-red-400;
+}
+.btn-alt {
+  @apply flex gap-2 items-center py-2.5 px-5 mr-2 mb-2 text-base font-medium text-[#FBFEF9] focus:outline-none  rounded-md border focus:z-10 focus:ring-2 focus:ring-gray-500 bg-gray-800 border-gray-600 hover:text-white hover:bg-gray-700;
 }
 
 .main-container{
@@ -110,6 +125,7 @@ width: 100%;
   height: 18px;
   border-radius: 50%;
   text-align: center;
+  justify-content: center;
   font-weight: 600;
 
 }
@@ -244,7 +260,7 @@ text-align: end;
   display: flex ;
   justify-content: space-between;
 }
-.banner-desc button{
+/* .banner-desc button{
   border-radius: 15px;
   padding: 10px 16px;
   background-color: white;
@@ -254,7 +270,7 @@ text-align: end;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-}
+} */
 .banner-desc .left h3{
   font-weight: 900;
   font-size: 80px;
@@ -509,61 +525,12 @@ padding: 30px 65px;
   display: flex;
   gap: 30px;
 }
-.add-to-cart{
-  /* @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800;
-  @apply mt-[40px]; */
-  padding: 10px 20px;
-  border: 1px solid #f02d34 ;
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: 500;
-  background-color: white;
-  color: #f02d34;
-  cursor: pointer;
-  width: 200px;
-   transform: scale(1, 1);
-  transition: transform 0.5s ease;
-}
-.buttons .add-to-cart:hover{
-  transform:scale(1.1,1.1)
-}
-.buttons .buy-now{
-  width: 200px;
 
-  padding: 10px 20px;
-  background-color: #f02d34;
-  color: white;
-  border: none;
-  margin-top: 40px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-   transform: scale(1, 1);
-  transition: transform 0.5s ease;
-}
-.buttons .buy-now:hover{
-  transform:scale(1.1,1.1)
-}
 .quantity-desc{
-  border: 1px solid gray;
-padding: 6px;
+  @apply border-[1px] border-[#292F36] p-[6px];
 }
-.quantity-desc .span{
-  font-size: 16px;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-.quantity-desc .minus{
-  border-right: 1px solid gray;
-  color: #f02d34;
-}
-.quantity-desc .num{
-  border-right: 1px solid gray;
-  font-size: 20px;
-}
-.quantity-desc .plus{
-  color: rgb(49, 168, 49);
-
+.quantity-count {
+  @apply flex text-center items-center font-medium text-[1.2rem] cursor-default bg-[#3a95d2] text-white w-5 h-5 rounded-full justify-center;
 }
 
 .maylike-products-wrapper{
