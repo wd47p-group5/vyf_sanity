@@ -15,10 +15,10 @@ const ProductDetails = ({productData, products}) => {
     return (
         <>
         <main className="my-8 text-[#292F36] dark:text-white">
-            <div className="container mx-auto px-6">
+            <div className="container dark:text-[#292F36] text-white mx-auto px-6">
                 <div className="md:flex md:items-center">
                     <div className="w-full h-64 md:w-1/2 lg:h-96 ">
-                        <img className="bg-black h-full w-full rounded-md object-cover max-w-lg mx-auto" src={urlFor(image && image[index])} alt="Photo of Girl Shorts" />
+                        <img className="bg-black h-full w-full rounded-md object-cover max-w-lg mx-auto shadow-md" src={urlFor(image && image[index])} alt="Photo of Girl Shorts" />
                         {/* <div className='hidden md:flex gap-5 mt-5 lg:ml-12'>
                             {image?.map((item,i)=> (
                                 <img src={urlFor(item) }
@@ -32,8 +32,8 @@ const ProductDetails = ({productData, products}) => {
                     
                     
                     <div className="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2 lg:py-12">
-                        <h3 className="text-3xl leading-7 mt-2 mb-2 font-bold lg:text-5xl">{name}</h3>
-                        <span className="text-2xl leading-7 text-[#3a95d2] font-bold mt-3">&#8369;{price}</span><br/>
+                        <h3 className="text-3xl leading-[3rem] lg:tracking-wide mt-2 mb-2 font-bold lg:text-5xl">{name}</h3>
+                        <span className="text-2xl leading-7 text-[#3a95d2] font-bold mt-3">&#8369;{price.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span><br/>
                         <span className="text-1xl leading-2 mt-5">{details}</span>
                             <div className="flex justify-center md:justify-normal items-center mt-8">
                                 

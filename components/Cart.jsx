@@ -31,7 +31,7 @@ const Cart = () => {
   }
 
   return (
-    <div className='cart-wrapper' ref={cartRef}>
+    <div className='cart-wrapper dark:text-[#292F36] text-white' ref={cartRef}>
       <div className='cart-container'>
         <div className='ml-5 flex flex-row items-center gap-2 text-lg'>
           &gt;
@@ -63,7 +63,7 @@ const Cart = () => {
                     </button>
                   <div className='py-2 text-[#292F36]'>
                     <h5 className='text-xl font-semibold'>{item.name}</h5>
-                    <h4 className='text-[#3a95d2]'>&#8369;{item.price}</h4>
+                    <h4 className='text-[#3a95d2]'>&#8369;{item.price.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</h4>
                   </div>
                   
                       <div className='flex flex-row justify-start items-center text-[#292F36] text-center rounded-md quantity-desc gap-5'>
