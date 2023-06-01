@@ -14,24 +14,15 @@ const ProductDetails = ({productData, products}) => {
     }
     return (
         <>
-        <main className="my-8 text-[#292F36] dark:text-white">
-            <div className="container dark:text-[#292F36] text-white mx-auto px-6">
+
+        <main className="slug-main">
+            <div className="slug-container">
                 <div className="md:flex md:items-center">
                     <div className="w-full h-64 md:w-1/2 lg:h-96 ">
                         <img className="bg-black h-full w-full rounded-md object-cover max-w-lg mx-auto shadow-md" src={urlFor(image && image[index])} alt="Photo of Girl Shorts" />
-                        {/* <div className='hidden md:flex gap-5 mt-5 lg:ml-12'>
-                            {image?.map((item,i)=> (
-                                <img src={urlFor(item) }
-                                key={i}
-                                className={i == index ? 'cursor-pointer flex flex-row w-[100px] h-[100px] rounded-md border-[#f5f5f7] border-2 hover:border-black hover:border-2': 'border-[#f5f5f7] border-2 hover:border-black hover:border-2 flex flex-row w-[100px] h-[100px]'}
-                                onMouseEnter={() => setIndex(i)}
-                                />
-                            ))}
-                        </div> */}
                     </div>
                     
-                    
-                    <div className="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2 lg:py-12">
+                    <div className="slug-product-container">
                         <h3 className="text-3xl leading-[3rem] lg:tracking-wide mt-2 mb-2 font-bold lg:text-5xl">{name}</h3>
                         <span className="text-2xl leading-7 text-[#3a95d2] font-bold mt-3">&#8369;{price.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span><br/>
                         <span className="text-1xl leading-2 mt-5">{details}</span>
@@ -54,79 +45,22 @@ const ProductDetails = ({productData, products}) => {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </main>
         
-        <div className='maylike-products-wrapper'>
-                <h2>You may also like</h2>
+        <div className='recommended-container'>
+                <h2>Recommended Products</h2>
                 <div className='marquee'>
-                    <div className='maylike-products-container track'>
+                    <div className='recommended-products-container track'>
                         {products.map((item)=>(
                             <Product key={item._id} product={item}/>
                         ))}
                     </div>
                 </div>
         </div>
-    {/* <div>
-        <div className='product-detail-container'>
-            <div>
-                <div className='image-container'>
-                    <img src={urlFor(image && image[index])} className='product-detail-image'/>
-                </div>
-                <div className='small-images-container'>
-                    {image?.map((item,i)=> (
-                        <img src={urlFor(item) }
-                        key={i}
-                        className={i == index ? 'small-image selected-image': 'small-image'}
-                        onMouseEnter={() => setIndex(i)}
-                        />
-                    ))}
-                </div>
-            </div>
-                <div className='product-detail-desc'>
-                    <h1>{name}</h1>
-                    <div className='reviews'>
-                        <div>
-                            <AiFillStar/>
-                            <AiFillStar/>
-                            <AiFillStar/>
-                            <AiFillStar/>
-                            <AiOutlineStar/>
-                        </div>
-                        <p>
-                            (20)
-                        </p>
-                    </div>
-                        <h4>Details:</h4>
-                        <p>{details}</p>
-                        <p className='price'>&#8369;{price}</p>
-                        <div className='quantity'>
-                            <h3>Quantity:</h3>
-                            <p className='quantity-desc'>
-                                <span className='minus' onClick={decQty}><AiOutlineMinus/></span>
-                                <span className='num'>{qty}</span>
-                                <span className='plus' onClick={incQty}><AiOutlinePlus/></span>
-                            </p>
-                        </div>
-                        <div className='buttons'>
-                            <button type='button' className='add-to-cart' onClick={() => {
-                                onAdd(productData,qty)}}>Add to Cart</button>
-                            <button type='button' className='buy-now' onClick={handleBuyNow}>Buy Now</button>
-                        </div>
-                </div>
-        </div>
-        <div className='maylike-products-wrapper'>
-                <h2>You may also like</h2>
-                <div className='marquee'>
-                    <div className='maylike-products-container track'>
-                        {products.map((item)=>(
-                            <Product key={item._id} product={item}/>
-                        ))}
-                    </div>
-                </div>
-        </div>
-    </div> */}
+    
 
     </>
   )

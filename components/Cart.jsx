@@ -45,10 +45,10 @@ const Cart = () => {
         {cartItems.length < 1 && (
           <div className='empty-cart'>
             
-            <AiOutlineShopping size={150}/>
+            <AiOutlineShopping className=' text-[#2563eb]' size={150}/>
             <h3>Your shopping bag is empty.</h3>
             <Link href='/'>
-              <button type='button' onClick={()=>setShowCart(false)} className='btn-alt'>
+              <button type='button' onClick={()=>setShowCart(false)} className='btn-default'>
                 Continue Shopping
               </button>
             </Link>
@@ -58,11 +58,11 @@ const Cart = () => {
           {cartItems.length >= 1 && cartItems.sort((a,b) => a.orderValue > b.orderValue ? 1 : -1).map((item)=>(
             <div className='product' key={item._id}>
               <img src={urlFor(item?.image[0])} className='cart-product-image'/>
-                <div className='flex items-start flex-col'>
+                <div className='flex items-center md:items-start flex-col'>
                     <button type='button' className='remove-item' onClick={()=> onRemove(item)}>
                       <TiDeleteOutline/>
                     </button>
-                  <div className='py-2 text-[#292F36]'>
+                  <div className='text-center md:text-start py-2 text-[#292F36]'>
                     <h5 className='text-xl font-semibold'>{item.name}</h5>
                     <h4 className='text-[#3a95d2]'>&#8369;{item.price.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</h4>
                   </div>

@@ -25,13 +25,13 @@ const Success = () => {
                     <BsBagCheckFill/>
                 </p>
                 <h2>Thank you for buying our products!</h2>
-                <p className='email-msg'>Check your email inbox for the receipt.</p>
-                <p className='description'>If you have any questions, please email:
-                <a className='email' href='mailto:vyfnetworksinc4@gmail.com'>vyfnetworksinc4@gmail.com</a>
-                </p>
+                <p>Check your email inbox for the receipt.</p>
+                <p>If you have any questions, please email us @</p>
+                <a className='bg-transparent text-[#292f36] border-none underline font-semibold text-xl hover:bg-transparent hover:text-gray-900' href='mailto:vyfnetworksinc4@gmail.com'>vyfnetworksinc4@gmail.com</a>
+                
                 <Link href="/">
-                    <button type='button' width="300px" className='btn'>
-                        Continue
+                    <button type='button' width="300px" className='btn-safe mt-5'>
+                        Continue Shopping
                     </button>
                 </Link>
             </div>

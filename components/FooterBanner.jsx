@@ -20,7 +20,7 @@ const FooterBanner = ({footerBanner:
   return (
     <>
 
-    <section className="bg-black text-white mt-14">
+    <section className="bg-black text-white mt-20">
         <div className="footer-banner-container">
             
             <div className="banner-desc">
