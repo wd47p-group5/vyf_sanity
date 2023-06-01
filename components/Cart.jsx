@@ -31,13 +31,14 @@ const Cart = () => {
   }
 
   return (
-    <div className='cart-wrapper dark:text-[#292F36] text-white' ref={cartRef}>
+    <div className='cart-wrapper' ref={cartRef}>
       <div className='cart-container'>
         <div className='ml-5 flex flex-row items-center gap-2 text-lg'>
           &gt;
           <button type="button" className='cart-icon' onClick={() => setShowCart(false)}>
-            <div className=''>
-              <AiOutlineShopping className='text-[2rem] text-[#292F36]' /> <span className='cart-item-qty flex items-center text-center mt-[-1.625rem]'>{totalQuantities}</span>
+            <div>
+              <AiOutlineShopping className='text-[2rem] text-[#292F36]' /> 
+              <span className='cart-item-qty flex items-center text-center mt-[-1.625rem]'>{totalQuantities}</span>
             </div>
           </button>
         </div>
@@ -67,7 +68,7 @@ const Cart = () => {
                   </div>
                   
                       <div className='flex flex-row justify-start items-center text-[#292F36] text-center rounded-md quantity-desc gap-5'>
-                        <span className='minus' onClick={()=>toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus/></span>
+                        <span className='cursor-pointer' onClick={()=>toggleCartItemQuantity(item._id, 'dec')}><AiOutlineMinus/></span>
                         <span className='quantity-count cursor-default '>{item.quantity}</span>
                         <span className='cursor-pointer font-medium' onClick={()=>toggleCartItemQuantity(item._id, 'inc')}><AiOutlinePlus/></span>
                       </div>

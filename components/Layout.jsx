@@ -14,7 +14,7 @@ const Layout = ({children}) => {
       <header>
         <Navbar />
       </header>
-      <main className=''>
+      <main className='overflow-hidden'>
         {children}      
       </main>
       <footer>

@@ -48,16 +48,10 @@ a {
   @apply flex gap-2 items-center py-2.5 px-5 mr-2 mb-2 text-base font-medium text-[#fff] dark:text-[#FBFEF9] focus:outline-none  rounded-md border focus:z-10 focus:ring-2 focus:ring-blue-400 dark:focus:ring-gray-500 bg-[#3a95d2] dark:bg-gray-800 border-blue-500 dark:border-gray-600 hover:text-white hover:bg-blue-400 dark:hover:bg-gray-700;
 }
 
-.layout{
-  padding: 10px;
+.navbar-container{
+  @apply flex justify-between px-5 py-2 overflow-hidden;
 }
 
-.navbar-container{
-  display: flex;
-  justify-content: space-between;
-  margin: 6px 18px;
-  position: relative;
-}
 .marquee-text{
   font-size: 29px;
   font-weight: 600;
@@ -91,45 +85,24 @@ a {
     margin-left: 6px;
 }
 .logo{
-  color: gray;
-  font-size: 18px;
+ @apply text-2xl md:text-3xl tracking-wider;
+}
 
-}
 .cart-icon{
-  font-size: 25px;
-  color: gray;
-  cursor: pointer;
-  position: relative;
-  transition: transform .4s ease;
-  border: none;
-  background-color: transparent;
+  @apply text-[1.563rem] cursor-pointer relative border-none bg-transparent;
 }
+
 .cart-icon:hover{
   transform: scale(1.1,1.1);
 }
 .cart-item-qty{
-  position: absolute;
-  right: -8px;
-  top: 25px;
-  font-size: 12px;
-  color: #eee;
-  background-color: #f02d34;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  text-align: center;
-  justify-content: center;
-  font-weight: 600;
+  @apply absolute right-[-8px] top-[25px] text-[12px] text-white bg-red-600 w-[18px] h-[18px] rounded-full text-center justify-center font-medium;
+}
 
-}
 .products-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-  width: 100%;
+  @apply flex flex-wrap justify-center gap-7 mt-[1.2rem] w-full;
 }
+
 .product-card{
  cursor: pointer;
   transform: scale(1, 1);
@@ -294,7 +267,7 @@ text-align: end;
 }
 
 .cart-wrapper {
-  @apply bg-[#292F3690] w-screen h-screen overflow-hidden fixed inset-0 z-[100];
+  @apply bg-[#292F3690] w-screen h-screen overflow-hidden fixed inset-0 z-[100] dark:text-[#292F36] text-white;
 }
 .cart-container {
   @apply h-screen w-screen bg-white py-12 px-16 relative text-[#292F36] overflow-auto;
@@ -381,11 +354,7 @@ text-align: end;
 
 }
 .remove-item{
-  font-size: 24px;
-  color: #f02d34;
-  cursor: pointer;
-  background: transparent;
-  border: none;
+  @apply text-[24px] text-red-500 cursor-pointer bg-transparent border-none;
 }
 .cart-bottom{
   @apply flex items-center mt-5 gap-2 flex-col justify-center text-center;
