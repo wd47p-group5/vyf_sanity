@@ -210,21 +210,20 @@ text-align: end;
   font-size: 16px;
   font-weight: 200;
 }
+
 .footer-banner-container{
-  padding: 100px 40px;
-  background-color: #f02d34;
-  border-radius: 15px;
-  position: relative;
-  height: 400px;
-  line-height: 1; 
-  color: white;
-  width: 100%;
-  margin-top: 120px;
+  @apply grid max-w-screen-xl py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12;
 }
 .banner-desc{
-  display: flex ;
-  justify-content: space-between;
+  @apply px-7 pt-10 text-center md:text-left place-self-center lg:col-span-7;
 }
+.banner-desc h2 {
+  @apply text-5xl tracking-wide uppercase max-w-2xl mb-4 font-extrabold;
+}
+.footer-image {
+  @apply lg:mt-0 lg:col-span-5 lg:flex;
+}
+
 /* .banner-desc button{
   border-radius: 15px;
   padding: 10px 16px;

@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { urlFor } from '../lib/client';
+import Image from 'next/image';
+import footerImage from '../public/ipad-pro.jpg'
 
 const FooterBanner = ({footerBanner: 
     {
@@ -16,28 +18,28 @@ const FooterBanner = ({footerBanner:
         desc
     }}) => {
   return (
-    <div className='footer-banner-container'>
-        <div className='banner-desc'>
-            <div className='left'>
-                <p>{discount}</p>
-                <h3>{largeText1}</h3>
-                <h3>{largeText2}</h3>
-                <p>{saleTime}</p>
+    <>
+
+    <section className="bg-black text-white mt-14">
+        <div className="footer-banner-container">
+            
+            <div className="banner-desc">
+                <h2>IPAD PRO</h2>
+                <h3 className='font-semibold text-4xl'>Supercharged by M2</h3>
+                <p className='font-normal text-xl mt-1 mb-2'>Price starts <span className='font-semibold'>₱55,990.00</span></p>
+                    <Link className='mt-5' type='button' href='/product/'>
+                    Buy now
+                    </Link> 
             </div>
-            <div className='right'>
-                <p>{smallText}</p>
-                <h3>{midText}</h3>
-                <p>{desc}</p>
-                <Link href={`/product/${product}`}>
-                    <button
-                        type='button'                    >
-                        {buttonText}
-                    </button>
-                </Link>                  
-            </div>
-            <img src={urlFor(image)} className='footer-banner-image'/>
+
+            <div className="footer-image">
+                <Image src={footerImage} />
+            </div>  
+
         </div>
-    </div>
+    </section>
+
+    </>
   )
 }
 
