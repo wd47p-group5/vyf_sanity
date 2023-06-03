@@ -29,7 +29,7 @@ body,* {
 }
 
 a {
-  @apply inline-flex text-center items-center justify-center px-8 py-3 text-base font-medium text-white border bg-[#292F36] border-gray-300 rounded-md hover:bg-gray-900 focus:ring-4 focus:ring-gray-100 dark:text-[#292F36] dark:bg-[#fff] dark:border-gray-700 dark:hover:bg-gray-200 dark:focus:ring-gray-800;
+  @apply inline-flex text-center items-center justify-center px-8 py-3 text-base font-medium text-white border bg-[#292F36] border-gray-300 rounded-md hover:bg-gray-900 focus:ring-4 focus:ring-gray-100 dark:text-[#292F36] dark:bg-[#fff] dark:border-gray-700 dark:hover:bg-gray-200 dark:focus:ring-gray-800 z-20;
 }
 
 .btn-darkmode {

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { urlFor } from '../lib/client'
 import Image from 'next/image'
-import HeroBg from '../public/iphone-hero.png';
+import AirPodsPink from '../public/airpods_bg.png';
 import HeroBg2 from '../public/iphone-14-pro.png';
 
 const HeroBanner = ({heroBanner}) => {
@@ -34,7 +34,30 @@ const HeroBanner = ({heroBanner}) => {
     </div>
 
     </section>
-      
+    
+    <div className='bg-white rounded-lg shadow-2xl px-10 py-16 mx-10 my-20 flex items-center flex-col-reverse md:hidden'>
+      <Link type='button' href='/products/hehe'>
+        Buy now
+      </Link>
+      <div className='text-gray-600 mt-5 text-center mb-5'>Introducing AirPods Max — a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</div>
+      <div className='text-6xl font-extrabold text-[#292F36] text-center'>AirPods Max</div>
+      <div className='w-full'>
+        <Image src={AirPodsPink} alt='AirPods Pro Pink' />
+      </div>
+    </div>
+
+    <div className='bg-white rounded-lg shadow-2xl px-10 py-16 mx-10 my-20 md:flex items-center flex-col-reverse hidden'>
+      <Link type='button' href='/product/AirPods Max Pink'>
+        Buy now
+      </Link>
+      <div className='text-gray-600 mt-16 text-center mb-7'>Introducing AirPods Max — a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</div>
+      <div className='relative text-[5rem] font-extrabold text-[#292F36] text-center mt-16 mb-20 tracking-wider leading-1'>
+        AirPods Max
+        <div className='absolute top-[-6rem] w-full z-10'>
+          <Image src={AirPodsPink} alt='AirPods Pro Pink' />
+        </div>
+      </div>
+    </div>
     </>
   )
 }
