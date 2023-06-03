@@ -3,14 +3,16 @@ import Link from 'next/link'
 import { urlFor } from '../lib/client'
 import Image from 'next/image'
 import HeroBg from '../public/iphone-hero.png';
+import HeroBg2 from '../public/iphone-14-pro.png';
 
 const HeroBanner = ({heroBanner}) => {
   return (
     
+    <>
     <section className="bg-white dark:bg-[#292F36] text-[#292F36] dark:text-white">
     <div className="hero-banner-container">
       <div className="mb-10 lg:hidden lg:mt-0 lg:col-span-5">
-            <Image src={HeroBg} />
+            <Image src={HeroBg2} />
       </div> 
         <div className="hero-banner-content">
             <h1 className='max-w-2xl mb-4 text-4xl font-extrabold tracking leading-none md:text-5xl xl:text-6xl dark:text-white'>iPhone 14 Pro Max</h1>
@@ -27,11 +29,13 @@ const HeroBanner = ({heroBanner}) => {
             </div>
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <Image src={HeroBg} />
+          <Image src={HeroBg2} />
         </div>                
     </div>
+
     </section>
-    
+      
+    </>
   )
 }
 

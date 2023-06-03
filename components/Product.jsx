@@ -7,7 +7,7 @@ const Product = ({product:{image, name, slug, price}}) => {
     <div>
       
         <Link href={`/product/${slug.current}`}>
-            <div className='shadow-lg rounded-lg py-5 px-5 flex flex-row w-[25rem] bg-white text-[#292F36]'>
+            <div className='shadow-lg rounded-lg py-5 px-5 flex flex-row w-[20rem] md:w-[25rem] bg-white text-[#292F36]'>
               <div>
                 <p className='text-base pt-5 font-extrabold'>{name}</p>
                 <img src={urlFor(image && image[0])} className="hover:scale-110 h-auto w-96 p-5" />
