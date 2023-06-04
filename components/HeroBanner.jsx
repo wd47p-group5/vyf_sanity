@@ -8,7 +8,7 @@ import AppleWatch from '../public/assets/apple_watch.jpg';
 import iPad from '../public/assets/ipad.jpg';
 import MacbookPromo from '../public/assets/macbook_promo.jpg';
 import AirpodsPromo from '../public/assets/promo_airpods.jpg';
-import AppleWatchLogo from '../public/assets/watch_logo.png';
+import iPhone14 from '../public/assets/iphone-14-promo.jpg';
 
 const HeroBanner = ({heroBanner}) => {
   return (
@@ -71,7 +71,7 @@ const HeroBanner = ({heroBanner}) => {
                 <h2 className='text-6xl mt-20 font-extrabold text-[#292F36] text-center'>Apple Watch</h2>
                 <div className='text-gray-600 font-medium text-3xl mt-5 text-center mb-5'>41mm <span className='pride-color font-semibold'>Pride Edition</span> Sport Band - S/M</div>
                 <p className='font-normal text-xl mt-1 mb-2 text-center'><span className='font-semibold'>₱18,880</span></p>
-                    <Link className='mt-5 items-center' type='button' href='/product/'>
+                    <Link className='mt-5 items-center' type='button' href='/product/Apple Watch SE - 41mm Pride Edition Sport Band SM'>
                     Buy now
                     </Link> 
             </div>
@@ -84,19 +84,64 @@ const HeroBanner = ({heroBanner}) => {
     </section>
 
     <div className='bg-transparent grid grid-cols-1 md:grid-cols-2 gap-5 px-10 py-5 '>
-      <div className='text-white bg-blue-300'>
-        <div className='w-full'>
-          <Image src={MacbookPromo} alt='AirPods Pro Pink' />
+      <div className='text-white bg-black flex flex-col items-center'>
+        <div className='text-center'>
+          <h2 className='text-6xl mt-20 font-extrabold text-[white] text-center'>MacBook Pro</h2>
+          <div className='text-gray-300 font-medium text-3xl mt-5 text-center mb-5'>Supercharged by M2 Pro and M2 Max.</div>
+          <Link className='mt-5 items-center' type='button' href='/product/MacBook Pro Silver - 14-inch 16GB RAM 1TB SSD'>
+            Buy now
+          </Link>
+        </div>
+        <div className='w-full mt-10'>
+          <Image src={MacbookPromo} alt='MacBook Promo' />
         </div>
       </div>
 
-      <div className='text-white bg-yellow-300'>
+      <div className='text-white bg-black'>
+
+        <div className='text-center'>
+          <h2 className='text-6xl mt-20 font-extrabold text-[white] text-center'>AirPods Pro</h2>
+          <div className='text-gray-300 font-medium text-3xl mt-5 text-center mb-5'>Rebuilt from the soundup.</div>
+          <Link className='mt-5 items-center' type='button' href='/product/AirPods Pro (2nd generation)'>
+              Buy now
+          </Link>
+        </div>
+
         <div className='w-full'>
-          <Image src={AirpodsPromo} alt='AirPods Pro Pink' />
+          <Image src={AirpodsPromo} alt='AirPods Promo' />
         </div>
       </div>
     </div>
 
+    <div className='bg-transparent grid grid-cols-1 md:grid-cols-2 gap-5 px-10 py-5 '>
+      <div className='text-[#292F36] bg-white flex flex-col items-center'>
+        <div className='text-center'>
+          <h2 className='text-6xl mt-20 font-extrabold text-center'>iPhone 14</h2>
+          <div className='text-gray-600 font-medium text-3xl mt-5 text-center mb-5'>Wonderfull.</div>
+          <Link className='mt-5 items-center' type='button' href='/product/iPhone 14 Plus (Product) Red 128GB'>
+            Buy now
+          </Link>
+        </div>
+        <div className='w-full mt-10'>
+          <Image src={iPhone14} alt='iPhone 14 Promo' />
+        </div>
+      </div>
+
+      <div className='text-[#292F36] bg-[#fbfbfb]'>
+
+        <div className='text-center'>
+          <h2 className='text-6xl mt-20 font-extrabold text-center'>iPad</h2>
+          <div className='text-gray-600 font-medium text-3xl mt-5 text-center mb-5'>Lovable. Drawable. Magical.</div>
+          <Link className='mt-5 items-center' type='button' href='/product/iPad 10th Gen Yellow- 10.9-inch Wi‑Fi + Cellular 256GB'>
+              Buy now
+          </Link>
+        </div>
+
+        <div className='w-full'>
+          <Image src={iPad} alt='iPad Promo' />
+        </div>
+      </div>
+    </div>
     
     </>
   )
