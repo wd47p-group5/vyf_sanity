@@ -36,7 +36,7 @@ const HeroBanner = ({heroBanner}) => {
     </section>
     
     <div className='bg-white rounded-lg shadow-2xl px-10 py-16 mx-10 my-20 flex items-center flex-col-reverse md:hidden'>
-      <Link type='button' href='/products/hehe'>
+      <Link type='button' href='/product/AirPods Max Pink'>
         Buy now
       </Link>
       <div className='text-gray-600 mt-5 text-center mb-5'>Introducing AirPods Max — a perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods. The ultimate personal listening experience is here.</div>
