@@ -4,6 +4,11 @@ import { urlFor } from '../lib/client'
 import Image from 'next/image'
 import AirPodsPink from '../public/airpods_bg.png';
 import HeroBg2 from '../public/iphone-14-pro.png';
+import AppleWatch from '../public/assets/apple_watch.jpg';
+import iPad from '../public/assets/ipad.jpg';
+import MacbookPromo from '../public/assets/macbook_promo.jpg';
+import AirpodsPromo from '../public/assets/promo_airpods.jpg';
+import AppleWatchLogo from '../public/assets/watch_logo.png';
 
 const HeroBanner = ({heroBanner}) => {
   return (
@@ -58,6 +63,41 @@ const HeroBanner = ({heroBanner}) => {
         </div>
       </div>
     </div>
+
+    <section className="bg-[#f5f5f7] text-[black] mt-20">
+        <div className="">
+            
+            <div className="flex items-center flex-col px-4">
+                <h2 className='text-6xl mt-20 font-extrabold text-[#292F36] text-center'>Apple Watch</h2>
+                <div className='text-gray-600 font-medium text-3xl mt-5 text-center mb-5'>41mm <span className='pride-color font-semibold'>Pride Edition</span> Sport Band - S/M</div>
+                <p className='font-normal text-xl mt-1 mb-2 text-center'><span className='font-semibold'>₱18,880</span></p>
+                    <Link className='mt-5 items-center' type='button' href='/product/'>
+                    Buy now
+                    </Link> 
+            </div>
+
+            <div className="footer-image">
+                <Image src={AppleWatch} />
+            </div>  
+
+        </div>
+    </section>
+
+    <div className='bg-transparent grid grid-cols-1 md:grid-cols-2 gap-5 px-10 py-5 '>
+      <div className='text-white bg-blue-300'>
+        <div className='w-full'>
+          <Image src={MacbookPromo} alt='AirPods Pro Pink' />
+        </div>
+      </div>
+
+      <div className='text-white bg-yellow-300'>
+        <div className='w-full'>
+          <Image src={AirpodsPromo} alt='AirPods Pro Pink' />
+        </div>
+      </div>
+    </div>
+
+    
     </>
   )
 }

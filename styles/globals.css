@@ -301,3 +301,11 @@ a {
 .success p {
   @apply font-medium text-base text-[#292f36];
 }
+
+.pride-color {
+  background: #FF4843;
+  background: linear-gradient(to right, #FF4843 0%, #FF6129 20%, #FCDD45 40%, #5CD36D 60%, #286DA6 80%, #894AB5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
