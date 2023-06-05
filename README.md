@@ -1,6 +1,17 @@
 # [vyf-network-inc](https://vyf-sanity.vercel.app/)
 ## KodeGo Capstone Project
 
+## Preview
+![This is an image](https://raw.githubusercontent.com/wd47p-group5/vyf_sanity/main/public/preview/hero-section.png)
+![This is an image](https://raw.githubusercontent.com/wd47p-group5/vyf_sanity/main/public/preview/banner-1.png)
+![This is an image](https://raw.githubusercontent.com/wd47p-group5/vyf_sanity/main/public/preview/banner-2.png)
+![This is an image](https://raw.githubusercontent.com/wd47p-group5/vyf_sanity/main/public/preview/products-section.png)
+![This is an image](https://raw.githubusercontent.com/wd47p-group5/vyf_sanity/main/public/preview/footer-section.png)
+![This is an image](https://raw.githubusercontent.com/wd47p-group5/vyf_sanity/main/public/preview/product-view-selected.png)
+![This is an image](https://raw.githubusercontent.com/wd47p-group5/vyf_sanity/main/public/preview/cart.png)
+![This is an image](https://raw.githubusercontent.com/wd47p-group5/vyf_sanity/main/public/preview/stripe-payment.png)
+![This is an image](https://raw.githubusercontent.com/wd47p-group5/vyf_sanity/main/public/preview/success-page.png)
+
 ## Github Page Link: 
 [GitHub Repo](https://github.com/wd47p-group5/vyf_sanity)
 [Live Link - Vercel](https://vyf-sanity.vercel.app/)
