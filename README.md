@@ -20,13 +20,14 @@
 
 1. Next.js (React Framework), Tailwind CSS
 2. sanity.io (Content Management System)
-3. Stripe (Payment) 
+3. Vercel (Deployment)
+4. Stripe (Payment) 
 
 ## CONTRIBUTORS:
 
 Lead: Christian Benedict A. Ramirez
 UI/UX Designer: Christian Benedict A. Ramirez & Khimberly Cruz Jara
-Products/Resources lists: Ed Benedict Quia & Reyna Jane Cabuga
+Products/Resources: Ed Benedict Quia & Reyna Jane Cabuga
 
 ## CURRENT FEATURES IMPLEMENTED
 
