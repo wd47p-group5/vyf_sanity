@@ -39,3 +39,7 @@ Products/Resources: Ed Benedict Quia & Reyna Jane Cabuga
 2. RESPONSIVE WEB TEST - https://responsivetesttool.com/
 3. GT Metrix - *[Click here for the result](https://gtmetrix.com/reports/vyf-sanity.vercel.app/lZbAjAit/)*
 4. We didn't use Validator because there will be an error for the trailing slash because this webapp is created from a react/next.js
+5. BUGS: Can't add multiple products in the cart for now.
+
+## FUTURE PLAN
+1. Add login to save users cart and wishlists.
